@@ -8,6 +8,7 @@ function OurFleet() {
     { name: "Audi A6", category: "Luxury", fuel: "Petrol", price: "₹6000/day", img: "https://hips.hearstapps.com/hmg-prod/images/2024-audi-a6-106-64761a1a30f1d.jpg?crop=0.598xw:0.468xh;0.109xw,0.334xh&resize=2048:*" },
     { name: "Maruti WagonR CNG", category: "Affordable", fuel: "CNG", price: "₹2500/day", img: "https://www.autovista.in/assets/img/new_cars_colour_variants/new-wagonR-colour-superior-white.jpg" },
     { name: "Mahindra Thar", category: "Offroad", fuel: "Diesel", price: "₹5500/day", img: "https://images.livemint.com/img/2022/09/01/1600x900/Mahindrathar_1604486465203_1604486476898_1662008266520_1662008266520.jpg" },
+     { name: "Toyota Hilux", category: "Offroad", fuel: "Petrol", price: "6000/day", img: "https://www.toyota.com.my/content/dam/malaysia/models/hilux/overview/toyota-my-hilux-overview-1200x1200.jpg" },
   ];
 
   const [categoryFilter, setCategoryFilter] = useState("All");
