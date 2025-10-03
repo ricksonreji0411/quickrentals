@@ -3,11 +3,11 @@ import { Container, Row, Col, Card, Button, Form } from "react-bootstrap";
 
 function OurFleet() {
   const allCars = [
-    { name: "Tesla Model 3", category: "Luxury", fuel: "EV", price: "₹5000/day", img: "https://tesla-cdn.thron.com/delivery/public/image/tesla/8ffbb902-73a9-46c4-93f6-65f2349c0456/bvlatuR/std/2880x1800/Desktop-Model3" },
-    { name: "BMW X5", category: "Luxury", fuel: "Diesel", price: "₹7000/day", img: "https://www.bmwusa.com/content/dam/bmwusa/X5/2021/overview/BMW-MY21-G05-X5-Overview-01.jpg" },
-    { name: "Audi A6", category: "Luxury", fuel: "Petrol", price: "₹6000/day", img: "https://www.audi.in/content/dam/nemo/models/a6/a6-limo/my-2021/1920x1080-gallery/1920x1080_AA6_L_181010.jpg" },
-    { name: "Maruti WagonR CNG", category: "Affordable", fuel: "CNG", price: "₹2500/day", img: "https://imgd.aeplcdn.com/664x374/n/cw/ec/115803/wagon-r-exterior-right-front-three-quarter.jpeg" },
-    { name: "Mahindra Thar", category: "Offroad", fuel: "Diesel", price: "₹5500/day", img: "https://imgd.aeplcdn.com/664x374/n/cw/ec/121992/thar-exterior-right-front-three-quarter.jpeg" },
+    { name: "Tesla Model 3", category: "Luxury", fuel: "EV", price: "₹5000/day", img: "https://img.autocarindia.com/News/20230901023724_Tesla.png?w=700&c=0" },
+    { name: "BMW X5", category: "Luxury", fuel: "Diesel", price: "₹7000/day", img: "https://www.bmw.in/content/dam/bmw/common/all-models/x-series/x5/2023/highlights/bmw-x-series-x5-sp-desktop.jpg" },
+    { name: "Audi A6", category: "Luxury", fuel: "Petrol", price: "₹6000/day", img: "https://hips.hearstapps.com/hmg-prod/images/2024-audi-a6-106-64761a1a30f1d.jpg?crop=0.598xw:0.468xh;0.109xw,0.334xh&resize=2048:*" },
+    { name: "Maruti WagonR CNG", category: "Affordable", fuel: "CNG", price: "₹2500/day", img: "https://www.autovista.in/assets/img/new_cars_colour_variants/new-wagonR-colour-superior-white.jpg" },
+    { name: "Mahindra Thar", category: "Offroad", fuel: "Diesel", price: "₹5500/day", img: "https://images.livemint.com/img/2022/09/01/1600x900/Mahindrathar_1604486465203_1604486476898_1662008266520_1662008266520.jpg" },
   ];
 
   const [categoryFilter, setCategoryFilter] = useState("All");
