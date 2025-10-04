@@ -9,7 +9,7 @@ function ThankYou() {
     return (
       <Container className="text-center mt-5">
         <h2>No Booking Found!</h2>
-        <Link to="/browse">
+        <Link to="/OurFleet">
           <Button variant="primary" className="mt-3">Browse Cars</Button>
         </Link>
       </Container>
@@ -22,7 +22,7 @@ function ThankYou() {
       <p className="lead mt-3">
         Your booking for <b>{booking.car}</b> from <b>{booking.startDate}</b> to <b>{booking.endDate}</b> is confirmed. 
       </p>
-      <Link to="/browse">
+      <Link to="/our-fleet">
         <Button variant="success" className="mt-3">Back to Browse Cars</Button>
       </Link>
     </Container>
