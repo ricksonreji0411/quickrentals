@@ -21,7 +21,7 @@ function Home() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://i.ytimg.com/vi/jl3gcn0s7yI/maxresdefault.jpg"
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-banner.webp"
             alt="Second slide"
             style={{ height: "500px", objectFit: "cover" }}
           />
