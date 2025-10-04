@@ -13,10 +13,10 @@ function CarDetails() {
   return (
     <Container className="mt-5 d-flex justify-content-center">
       <Card style={{ width: "32rem" }}>
-        <Card.Img 
-          variant="top" 
-          src={car.img} 
-          style={{ height: "250px", objectFit: "cover" }} 
+        <Card.Img
+          variant="top"
+          src={car.img}
+          style={{ height: "250px", objectFit: "cover" }}
         />
         <Card.Body>
           <Card.Title className="fw-bold">{car.name}</Card.Title>
@@ -35,9 +35,11 @@ function CarDetails() {
             <ListGroup.Item><b>Color:</b> {car.color}</ListGroup.Item>
           </ListGroup>
 
-          <div className="mt-4 d-flex justify-content-between">
-            
-            <Button variant="primary" onClick={() => navigate("/booking", { state: car })}>
+          <div className="mt-4 text-center">
+            <Button
+              variant="primary"
+              onClick={() => navigate("/booking", { state: car })}
+            >
               Proceed to Booking
             </Button>
           </div>

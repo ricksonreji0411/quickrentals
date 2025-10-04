@@ -20,7 +20,7 @@ function App() {
   <Route path="/cardetails" element={<CarDetails />} />
 
   <Route path="/booking" element={<Booking />} />
-  <Route path="/thank-you" element={<ThankYou />} />
+  <Route path="/thankyou" element={<ThankYou />} />
 </Routes>
 
       {/* Footer */}
