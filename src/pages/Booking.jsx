@@ -14,7 +14,8 @@ function Booking() {
     "BMW X5",
     "Audi A6",
     "Maruti WagonR CNG",
-    "Mahindra Thar"
+    "Mahindra Thar",
+    "Toyota Hilux"
   ];
 
   const handleSubmit = (e) => {
