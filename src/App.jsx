@@ -1,30 +1,39 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import OurFleet from "./pages/OurFleet";
 import Booking from "./pages/Booking";
 import ThankYou from "./pages/ThankYou";
 import CarDetails from "./pages/CarDetails";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Account from "./pages/Account";
+import Footer from "./components/Footer";
 
 function App() {
+  const [user, setUser] = useState(() => JSON.parse(sessionStorage.getItem("user")));
+
+  useEffect(() => {
+    const storedUser = JSON.parse(sessionStorage.getItem("user"));
+    setUser(storedUser);
+  }, []);
+
   return (
     <Router>
-      {/* Navbar */}
-      <Navbar />
-
-      {/* Main Routes */}
+      {user && <Navbar />}
       <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/our-fleet" element={<OurFleet />} /> {/* updated path */}
-  <Route path="/cardetails" element={<CarDetails />} />
-
-  <Route path="/booking" element={<Booking />} />
-  <Route path="/thankyou" element={<ThankYou />} />
-</Routes>
-
-      {/* Footer */}
-      <Footer />
+        {!user && <Route path="/" element={<Login setUser={setUser} />} />}
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login setUser={setUser} />} />
+        <Route path="/home" element={user ? <Home /> : <Login setUser={setUser} />} />
+        <Route path="/ourfleet" element={user ? <OurFleet /> : <Login setUser={setUser} />} />
+        <Route path="/booking" element={user ? <Booking /> : <Login setUser={setUser} />} />
+        <Route path="/cardetails" element={<CarDetails />} />
+        <Route path="/thankyou" element={<ThankYou />} />
+        <Route path="/account" element={<Account setUser={setUser} />} />
+      </Routes>
+      {user && <Footer />}
     </Router>
   );
 }
