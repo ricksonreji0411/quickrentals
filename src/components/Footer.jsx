@@ -16,8 +16,8 @@ function Footer() {
           <Col md={3}>
             <h6>Quick Links</h6>
             <ul className="list-unstyled">
-              <li><Link to="/" className="text-white text-decoration-none">Home</Link></li>
-              <li><Link to="/our-fleet" className="text-white text-decoration-none">Our Fleet</Link></li>
+              <li><Link to="/home" className="text-white text-decoration-none">Home</Link></li>
+              <li><Link to="/ourfleet" className="text-white text-decoration-none">Our Fleet</Link></li>
               <li><Link to="/booking" className="text-white text-decoration-none">Booking</Link></li>
             </ul>
           </Col>
