@@ -22,7 +22,7 @@ function OurFleet() {
       seats: "5", transmission: "Automatic", topSpeed: "250 km/h", color: "Blue"
     },
     { 
-      name: "Maruti WagonR CNG", category: "Affordable", fuel: "CNG", price: "₹2500/day",
+      name: "Maruti WagonR CNG", category: "Economic", fuel: "CNG", price: "₹2500/day",
       img: "https://www.autovista.in/assets/img/new_cars_colour_variants/new-wagonR-colour-superior-white.jpg",
       seats: "5", transmission: "Manual", topSpeed: "150 km/h", color: "Silver"
     },
@@ -63,7 +63,7 @@ function OurFleet() {
             <Form.Select value={categoryFilter} onChange={(e) => setCategoryFilter(e.target.value)}>
               <option value="All">All</option>
               <option value="Luxury">Luxury</option>
-              <option value="Affordable">Affordable</option>
+              <option value="Economic">Economic</option>
               <option value="Offroad">Offroad</option>
             </Form.Select>
           </Form.Group>

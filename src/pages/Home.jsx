@@ -26,7 +26,7 @@ function Home() {
             style={{ height: "500px", objectFit: "cover" }}
           />
           <Carousel.Caption>
-            <h3>Affordable Rentals</h3>
+            <h3>Economic</h3>
             <p>Choose from a wide range of budget-friendly options.</p>
           </Carousel.Caption>
         </Carousel.Item>
