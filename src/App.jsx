@@ -10,6 +10,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Account from "./pages/Account";
 import Footer from "./components/Footer";
+import MyCart from "./pages/MyCart";
+
 
 function App() {
   const [user, setUser] = useState(() => JSON.parse(sessionStorage.getItem("user")));
@@ -26,6 +28,7 @@ function App() {
         {!user && <Route path="/" element={<Login setUser={setUser} />} />}
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
+        <Route path="/mycart" element={user ? <MyCart /> : <Login setUser={setUser} />} />
         <Route path="/home" element={user ? <Home /> : <Login setUser={setUser} />} />
         <Route path="/ourfleet" element={user ? <OurFleet /> : <Login setUser={setUser} />} />
         <Route path="/booking" element={user ? <Booking /> : <Login setUser={setUser} />} />

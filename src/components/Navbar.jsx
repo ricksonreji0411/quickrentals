@@ -7,7 +7,7 @@ function AppNavbar() {
   const [expanded, setExpanded] = useState(false);
   const location = useLocation();
 
-  // Close the menu whenever the route changes
+  // Close menu when route changes
   useEffect(() => {
     setExpanded(false);
   }, [location]);
@@ -25,7 +25,7 @@ function AppNavbar() {
         {/* Left: Logo */}
         <Navbar.Brand
           as={Link}
-          to="/"
+          to="/home"
           style={{
             color: "white",
             fontWeight: "600",
@@ -47,6 +47,7 @@ function AppNavbar() {
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
             <Nav.Link as={Link} to="/ourfleet">Our Fleet</Nav.Link>
             {user && <Nav.Link as={Link} to="/booking">Booking</Nav.Link>}
+            {user && <Nav.Link as={Link} to="./MyCart">My Cart</Nav.Link>}
             <Nav.Link as={Link} to="/account">Account</Nav.Link>
           </Nav>
         </Navbar.Collapse>
