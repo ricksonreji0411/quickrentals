@@ -18,7 +18,7 @@ function Footer() {
             <ul className="list-unstyled">
               <li><Link to="./home" className="text-white text-decoration-none">Home</Link></li>
               <li><Link to="/ourfleet" className="text-white text-decoration-none">Our Fleet</Link></li>
-              <li><Link to="/booking" className="text-white text-decoration-none">Booking</Link></li>
+              <li><Link to="./MyCart" className="text-white text-decoration-none">My Bookings</Link></li>
             </ul>
           </Col>
 

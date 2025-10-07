@@ -13,7 +13,7 @@ function Account({ setUser }) {
   const handleLogout = () => {
     sessionStorage.removeItem("user");
     setUser(null); // ✅ instantly clear user from App
-    navigate("/login", { replace: true });
+    navigate("./Login", { replace: true });
   };
 
   if (!user) return null;

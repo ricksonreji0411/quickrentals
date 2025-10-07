@@ -7,7 +7,7 @@ function Booking() {
   const navigate = useNavigate();
   const selectedCar = location.state || null;
 
-  // List of cars (so user can pick one if they didn’t come from CarDetails)
+  // Available cars (if not coming from CarDetails)
   const allCars = [
     { name: "Tesla Model 3", price: "₹5000/day" },
     { name: "BMW X5", price: "₹7000/day" },
@@ -15,6 +15,7 @@ function Booking() {
     { name: "Maruti WagonR CNG", price: "₹2500/day" },
     { name: "Mahindra Thar", price: "₹5500/day" },
     { name: "Toyota Hilux", price: "₹6000/day" },
+    { name: "Maruti Suzuki Swift", price: "₹3000/day" },
   ];
 
   const [formData, setFormData] = useState({
@@ -43,13 +44,32 @@ function Booking() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // ✅ Save booking to localStorage
+    const newBooking = {
+      car: formData.car,
+      price: formData.price,
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      pickup: formData.pickup,
+      drop: formData.drop,
+      date: new Date().toLocaleDateString(),
+    };
+
+    const existingBookings = JSON.parse(localStorage.getItem("bookings")) || [];
+    existingBookings.push(newBooking);
+    localStorage.setItem("bookings", JSON.stringify(existingBookings));
+
+    // ✅ Navigate to Thank You page
     navigate("/thankyou", { state: formData });
   };
 
   return (
     <Container className="mt-5 d-flex justify-content-center">
-      <Card style={{ width: "32rem" }} className="p-4 shadow">
-        <h3 className="text-center mb-4">Car Booking Form</h3>
+      <Card style={{ width: "32rem" }} className="p-4 shadow-lg bg-light text-black border-0">
+        <h3 className="text-center mb-4 text-warning">Car Booking Form</h3>
+
         <Form onSubmit={handleSubmit}>
           {/* Car Selection */}
           <Form.Group className="mb-3">
@@ -73,7 +93,7 @@ function Booking() {
             )}
           </Form.Group>
 
-          {/* Read-only Price */}
+          {/* Price */}
           {formData.car && (
             <Form.Group className="mb-3">
               <Form.Label>Price per Day</Form.Label>
@@ -118,6 +138,7 @@ function Booking() {
             />
           </Form.Group>
 
+          {/* Dates */}
           <Form.Group className="mb-3">
             <Form.Label>Pickup Date</Form.Label>
             <Form.Control

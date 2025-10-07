@@ -46,8 +46,8 @@ function AppNavbar() {
           <Nav>
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
             <Nav.Link as={Link} to="/ourfleet">Our Fleet</Nav.Link>
-            {user && <Nav.Link as={Link} to="/booking">Booking</Nav.Link>}
-            {user && <Nav.Link as={Link} to="./MyCart">My Cart</Nav.Link>}
+           
+            {user && <Nav.Link as={Link} to="./MyCart">My Bookings</Nav.Link>}
             <Nav.Link as={Link} to="/account">Account</Nav.Link>
           </Nav>
         </Navbar.Collapse>
