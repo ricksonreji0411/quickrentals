@@ -37,19 +37,21 @@ function OurFleet() {
       seats: "5", transmission: "Manual", topSpeed: "175 km/h", color: "White"
     },
     {
-      name:"Maruti Suzuki Swift", category:"HatchBack", fuel:"Petrol", price:"₹3000/day",
-      img:"https://i.bstr.es/drivingeco/2020/09/nuevo-suzuki-Swift-3.jpg",
+      name: "Maruti Suzuki Swift", category: "HatchBack", fuel: "Petrol", price: "₹3000/day",
+      img: "https://i.bstr.es/drivingeco/2020/09/nuevo-suzuki-Swift-3.jpg",
       seats: "5", transmission: "Automatic", topSpeed: "180 km/h", color: "Red"
     }
   ];
 
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [fuelFilter, setFuelFilter] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const filteredCars = allCars.filter((car) => {
     const categoryMatch = categoryFilter === "All" || car.category === categoryFilter;
     const fuelMatch = fuelFilter === "All" || car.fuel === fuelFilter;
-    return categoryMatch && fuelMatch;
+    const searchMatch = car.name.toLowerCase().includes(searchTerm.toLowerCase());
+    return categoryMatch && fuelMatch && searchMatch;
   });
 
   const handleRentNow = (car) => {
@@ -60,9 +62,9 @@ function OurFleet() {
     <Container className="mt-4">
       <h2 className="fw-bold mb-4">Our Fleet</h2>
 
-      {/* Filters */}
-      <Row className="mb-4">
-        <Col md={6}>
+      {/* Filters and Search Row */}
+      <Row className="mb-4 gy-3">
+        <Col md={4}>
           <Form.Group controlId="categorySelect">
             <Form.Label><b>Filter by Category</b></Form.Label>
             <Form.Select value={categoryFilter} onChange={(e) => setCategoryFilter(e.target.value)}>
@@ -74,7 +76,8 @@ function OurFleet() {
             </Form.Select>
           </Form.Group>
         </Col>
-        <Col md={6}>
+
+        <Col md={4}>
           <Form.Group controlId="fuelSelect">
             <Form.Label><b>Filter by Fuel Type</b></Form.Label>
             <Form.Select value={fuelFilter} onChange={(e) => setFuelFilter(e.target.value)}>
@@ -86,32 +89,51 @@ function OurFleet() {
             </Form.Select>
           </Form.Group>
         </Col>
+
+        {/* ✅ Search by Car Name */}
+        <Col md={4}>
+          <Form.Group controlId="searchCar">
+            <Form.Label><b>Search by Car Name</b></Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter car name..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </Form.Group>
+        </Col>
       </Row>
 
       {/* Cars Display */}
       <Row>
-        {filteredCars.map((car, i) => (
-          <Col md={4} key={i} className="mb-4">
-            <Card>
-              <Card.Img
-                variant="top"
-                src={car.img}
-                style={{ height: "200px", objectFit: "cover" }}
-              />
-              <Card.Body>
-                <Card.Title>{car.name}</Card.Title>
-                <Card.Text>
-                  <b>Category:</b> {car.category} <br />
-                  <b>Fuel:</b> {car.fuel} <br />
-                  <b>Price:</b> {car.price}
-                </Card.Text>
-                <Button variant="success" onClick={() => handleRentNow(car)}>
-                  Rent Now
-                </Button>
-              </Card.Body>
-            </Card>
+        {filteredCars.length > 0 ? (
+          filteredCars.map((car, i) => (
+            <Col md={4} key={i} className="mb-4">
+              <Card className="shadow-sm">
+                <Card.Img
+                  variant="top"
+                  src={car.img}
+                  style={{ height: "200px", objectFit: "cover" }}
+                />
+                <Card.Body>
+                  <Card.Title>{car.name}</Card.Title>
+                  <Card.Text>
+                    <b>Category:</b> {car.category} <br />
+                    <b>Fuel:</b> {car.fuel} <br />
+                    <b>Price:</b> {car.price}
+                  </Card.Text>
+                  <Button variant="success" onClick={() => handleRentNow(car)}>
+                    Rent Now
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))
+        ) : (
+          <Col className="text-center mt-5">
+            <h5>No cars found matching your search.</h5>
           </Col>
-        ))}
+        )}
       </Row>
     </Container>
   );
