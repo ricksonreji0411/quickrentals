@@ -38,7 +38,7 @@ function ThankYou() {
           <b>Return Date:</b> {booking.drop}
         </p>
 
-        {/* ✅ Back to Home Button */}
+    
         <div className="text-center mt-4">
           <Button variant=" " onClick={handleBackHome}>
             ← Back to Home

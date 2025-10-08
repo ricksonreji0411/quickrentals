@@ -45,7 +45,7 @@ function Booking() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // ✅ Save booking to localStorage
+    //  Save booking to localStorage
     const newBooking = {
       car: formData.car,
       price: formData.price,
@@ -61,7 +61,7 @@ function Booking() {
     existingBookings.push(newBooking);
     localStorage.setItem("bookings", JSON.stringify(existingBookings));
 
-    // ✅ Navigate to Thank You page
+    //  Navigate to Thank You page
     navigate("/thankyou", { state: formData });
   };
 
