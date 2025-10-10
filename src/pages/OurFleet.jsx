@@ -7,80 +7,80 @@ function OurFleet() {
 
   const allCars = [
      {
-      name: "Ford Mustang ", category: "Coupe", fuel: "Petrol", price: "₹4500/day",
+      name: "Ford Mustang ", category: "Coupe", fuel: "Petrol", price: "₹12000/day",
       img:"https://prezentokracja.pl/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/f/o/ford-mustang-gt-jazda-za-kierownica-mustanga_1.jpg",
       seats: "4", transmission: "Automatic", topSpeed: "250 km/h", color: "Red"
 
     },
     {
-      name:"Mercedes C-Class", category: "Sedan", fuel: "Diesel", price: "₹5500/day",
+      name:"Mercedes C-Class", category: "Sedan", fuel: "Diesel", price: "₹42000/day",
       img:"https://auto.hindustantimes.com/htmobile1/mercedesbenz_cclass2022/images/exterior_mercedes-benz-c-class-2022_front-left-view_600x400.jpg?imwidth=420",
       seats: "5", transmission: "Automatic", topSpeed: "240 km/h", color: "Black"
     },
     {
-      name:"Mercedes GWagon", category: "SUV", fuel: "Petrol", price: "₹12000/day",
+      name:"Mercedes GWagon", category: "SUV", fuel: "Petrol", price: "₹15000/day",
       img:"https://miro.medium.com/v2/resize:fit:1200/1*hxp31ZGIrInMEBUiz2ZdvA.jpeg",
       seats: "5", transmission: "Automatic", topSpeed: "210 km/h", color: "Black"
     },{
-    name:"BMW m3", category: "Sedan", fuel: "Petrol", price: "₹8000/day",
+    name:"BMW m3", category: "Sedan", fuel: "Petrol", price: "₹18000/day",
     img:"https://hips.hearstapps.com/hmg-prod/images/2025-bmw-m3-110-66562ddceaf59.jpg",
     seats: "5", transmission: "Automatic", topSpeed: "290 km/h", color: "Green"
     },
     {
-      name:"BMW m5", category: "Sedan", fuel: "Petrol", price: "₹9000/day",
+      name:"BMW m5", category: "Sedan", fuel: "Petrol", price: "₹19000/day",
       img:"https://bmwindia.co.in/offers/m5/images/header-mob.jpg",
       seats: "5", transmission: "Automatic", topSpeed: "305 km/h", color: "Black"
     },
 
     {
-      name:"Volkswagen Polo", category: "HatchBack", fuel: "Petrol", price: "₹3500/day",
+      name:"Volkswagen Polo", category: "HatchBack", fuel: "Petrol", price: "₹6000/day",
       img:"https://wallpapercat.com/w/full/6/d/c/1694716-3840x2160-desktop-4k-volkswagen-polo-wallpaper-image.jpg",
       seats: "5", transmission: "Manual", topSpeed: "190 km/h", color: "White"
     },
     {
-     name:"Jeep Wrangler", category: "SUV", fuel: "Petrol", price: "₹6500/day",
+     name:"Jeep Wrangler", category: "SUV", fuel: "Petrol", price: "₹13500/day",
      img:"https://stimg.cardekho.com/images/carexteriorimages/930x620/Jeep/Wrangler/11675/1714043545186/front-left-side-47.jpg",
      seats: "5", transmission: "Manual", topSpeed: "180 km/h", color: "Red"
     },
       
   
     { 
-      name: "Tesla Model 3", category: "Sedan", fuel: "EV", price: "₹5000/day",
+      name: "Tesla Model 3", category: "Sedan", fuel: "EV", price: "₹11500/day",
       img: "https://img.autocarindia.com/News/20230901023724_Tesla.png?w=700&c=0",
       seats: "5", transmission: "", topSpeed: "225 km/h", color: "red"
     },
     { 
-      name: "BMW X5", category: "SUV", fuel: "Diesel", price: "₹7000/day",
+      name: "BMW X5", category: "SUV", fuel: "Diesel", price: "₹17000/day",
       img: "https://www.bmw.in/content/dam/bmw/common/all-models/x-series/x5/2023/highlights/bmw-x-series-x5-sp-desktop.jpg",
       seats: "5", transmission: "Automatic", topSpeed: "230 km/h", color: "silver"
     },
     { 
-      name: "Audi A6", category: "Sedan", fuel: "Petrol", price: "₹6000/day",
+      name: "Audi A6", category: "Sedan", fuel: "Petrol", price: "₹11000/day",
       img: "https://hips.hearstapps.com/hmg-prod/images/2024-audi-a6-106-64761a1a30f1d.jpg?crop=0.598xw:0.468xh;0.109xw,0.334xh&resize=2048:*",
       seats: "5", transmission: "Automatic", topSpeed: "250 km/h", color: "Silver"
     },  { 
-      name: "Toyota Hilux", category: "Truck", fuel: "Petrol", price: "₹6000/day",
+      name: "Toyota Hilux", category: "Truck", fuel: "Petrol", price: "₹14000/day",
       img: "https://www.toyota.com.my/content/dam/malaysia/models/hilux/overview/toyota-my-hilux-overview-1200x1200.jpg",
       seats: "5", transmission: "Manual", topSpeed: "175 km/h", color: "Copper Brown"
     },
     {
-      name:"Ford F-150", category: "Truck", fuel: "Diesel", price: "₹7500/day",
+      name:"Ford F-150", category: "Truck", fuel: "Diesel", price: "₹17500/day",
       img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuNVd0Zh1qq_RqzxTktyRDpHtgzSKGEfDJFA&s",
       seats: "5", transmission: "Automatic", topSpeed: "180 km/h", color: "Black"
     },
     {
-      name:"Mahindra Thar Roxx", category: "SUV", fuel: "Petrol", price: "₹6000/day",
+      name:"Mahindra Thar Roxx", category: "SUV", fuel: "Petrol", price: "₹9000/day",
       img:"https://imgd.aeplcdn.com/642x361/n/cw/ec/184631/mahindra-thar-roxx-left-front-three-quarter5.jpeg?isig=0&wm=1&q=75",
       seats: "4", transmission: "Manual", topSpeed: "160 km/h", color: "Black"
     },
    
     { 
-      name: "Mahindra Thar ", category: "SUV", fuel: "Diesel", price: "₹5500/day",
+      name: "Mahindra Thar ", category: "SUV", fuel: "Diesel", price: "₹8500/day",
       img: "https://images.livemint.com/img/2022/09/01/1600x900/Mahindrathar_1604486465203_1604486476898_1662008266520_1662008266520.jpg",
       seats: "4", transmission: "Manual", topSpeed: "155 km/h", color: "Red"
     },
     {
-      name: "Hyundai Creta", category: "SUV", fuel: "Petrol", price: "₹4000/day",
+      name: "Hyundai Creta", category: "SUV", fuel: "Petrol", price: "₹5000/day",
       img: "https://akm-img-a-in.tosshub.com/indiatoday/styles/medium_crop_simple/public/2024-01/the-new-hyundai-creta-1_0.jpg?VersionId=BiYnDLcEG3uEzxvrpjcn6GJw6Khgptx7&size=750:*",
       seats: "5", transmission: "Automatic", topSpeed: "190 km/h", color: "Black"
     },
