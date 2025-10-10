@@ -20,9 +20,9 @@ function AppNavbar() {
       collapseOnSelect
       expanded={expanded}
       onToggle={(val) => setExpanded(val)}
-      className="px-3"
+      className="px-3" // add horizontal padding
     >
-      <Container fluid className="d-flex justify-content-between align-items-center">
+      <Container fluid>
         {/* Left: Logo */}
         <Navbar.Brand
           as={Link}
@@ -36,24 +36,29 @@ function AppNavbar() {
           QuickRental
         </Navbar.Brand>
 
-        {/* Right: Toggle Button */}
-        <div className="d-flex align-items-center">
+        {/* Right: Toggle Button (moved further right) */}
+        <div style={{ marginRight: "10px" }}>
           <Navbar.Toggle
             aria-controls="navbar-menu"
             onClick={() => setExpanded(expanded ? false : true)}
+            style={{
+              border: "none",
+              outline: "none",
+              boxShadow: "none",
+            }}
           />
         </div>
-      </Container>
 
-      {/* Collapsible Menu */}
-      <Navbar.Collapse id="navbar-menu" className="bg-dark">
-        <Nav className="text-center">
-          <Nav.Link as={Link} to="/home">Home</Nav.Link>
-          <Nav.Link as={Link} to="/ourfleet">Our Fleet</Nav.Link>
-          {user && <Nav.Link as={Link} to="/MyCart">My Bookings</Nav.Link>}
-          <Nav.Link as={Link} to="/account">Account</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
+        {/* Collapsible Menu */}
+        <Navbar.Collapse id="navbar-menu" className="justify-content-end">
+          <Nav>
+            <Nav.Link as={Link} to="/home">Home</Nav.Link>
+            <Nav.Link as={Link} to="/ourfleet">Our Fleet</Nav.Link>
+            {user && <Nav.Link as={Link} to="./MyCart">My Bookings</Nav.Link>}
+            <Nav.Link as={Link} to="/account">Account</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 }

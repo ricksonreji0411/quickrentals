@@ -9,6 +9,10 @@ function Booking() {
 
   // Available cars (if not coming from CarDetails)
   const allCars = [
+    { name: "Ford Mustang", price: "₹6000/day" },
+    {name: "mercedes c class", price: "₹5500/day"},
+    {name: "Volkswagen Polo", price: "₹3500/day"},
+    { name: "Jeep Wrangler", price: "₹6500/day" },
     { name: "Tesla Model 3", price: "₹5000/day" },
     { name: "BMW X5", price: "₹7000/day" },
     { name: "Audi A6", price: "₹6000/day" },

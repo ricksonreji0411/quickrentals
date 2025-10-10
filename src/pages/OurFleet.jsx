@@ -6,6 +6,29 @@ function OurFleet() {
   const navigate = useNavigate();
 
   const allCars = [
+     {
+      name: "Ford Mustang ", category: "Coupe", fuel: "Petrol", price: "₹4500/day",
+      img:"https://prezentokracja.pl/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/f/o/ford-mustang-gt-jazda-za-kierownica-mustanga_1.jpg",
+      seats: "4", transmission: "Automatic", topSpeed: "250 km/h", color: "Red"
+
+    },
+    {
+      name:"Mercedes C-Class", category: "Sedan", fuel: "Diesel", price: "₹5500/day",
+      img:"https://auto.hindustantimes.com/htmobile1/mercedesbenz_cclass2022/images/exterior_mercedes-benz-c-class-2022_front-left-view_600x400.jpg?imwidth=420",
+      seats: "5", transmission: "Automatic", topSpeed: "240 km/h", color: "Black"
+    },
+    {
+      name:"Volkswagen Polo", category: "HatchBack", fuel: "Petrol", price: "₹3500/day",
+      img:"https://wallpapercat.com/w/full/6/d/c/1694716-3840x2160-desktop-4k-volkswagen-polo-wallpaper-image.jpg",
+      seats: "5", transmission: "Manual", topSpeed: "190 km/h", color: "Blue"
+    },
+    {
+     name:"Jeep Wrangler", category: "SUV", fuel: "Petrol", price: "₹6500/day",
+     img:"https://stimg.cardekho.com/images/carexteriorimages/930x620/Jeep/Wrangler/11675/1714043545186/front-left-side-47.jpg",
+     seats: "5", transmission: "Manual", topSpeed: "180 km/h", color: "Red"
+    },
+      
+  
     { 
       name: "Tesla Model 3", category: "Sedan", fuel: "EV", price: "₹5000/day",
       img: "https://img.autocarindia.com/News/20230901023724_Tesla.png?w=700&c=0",
@@ -20,26 +43,34 @@ function OurFleet() {
       name: "Audi A6", category: "Sedan", fuel: "Petrol", price: "₹6000/day",
       img: "https://hips.hearstapps.com/hmg-prod/images/2024-audi-a6-106-64761a1a30f1d.jpg?crop=0.598xw:0.468xh;0.109xw,0.334xh&resize=2048:*",
       seats: "5", transmission: "Automatic", topSpeed: "250 km/h", color: "Blue"
+    },  { 
+      name: "Toyota Hilux", category: "Truck", fuel: "Petrol", price: "₹6000/day",
+      img: "https://www.toyota.com.my/content/dam/malaysia/models/hilux/overview/toyota-my-hilux-overview-1200x1200.jpg",
+      seats: "5", transmission: "Manual", topSpeed: "175 km/h", color: "White"
     },
-    { 
-      name: "Maruti WagonR CNG", category: "HatchBack", fuel: "CNG", price: "₹2500/day",
-      img: "https://www.autovista.in/assets/img/new_cars_colour_variants/new-wagonR-colour-superior-white.jpg",
-      seats: "5", transmission: "Manual", topSpeed: "150 km/h", color: "Silver"
-    },
+
+   
     { 
       name: "Mahindra Thar", category: "SUV", fuel: "Diesel", price: "₹5500/day",
       img: "https://images.livemint.com/img/2022/09/01/1600x900/Mahindrathar_1604486465203_1604486476898_1662008266520_1662008266520.jpg",
       seats: "4", transmission: "Manual", topSpeed: "155 km/h", color: "Red"
     },
-    { 
-      name: "Toyota Hilux", category: "Truck", fuel: "Petrol", price: "₹6000/day",
-      img: "https://www.toyota.com.my/content/dam/malaysia/models/hilux/overview/toyota-my-hilux-overview-1200x1200.jpg",
-      seats: "5", transmission: "Manual", topSpeed: "175 km/h", color: "White"
+    {
+      name: "Hyundai Creta", category: "SUV", fuel: "Petrol", price: "₹4000/day",
+      img: "https://akm-img-a-in.tosshub.com/indiatoday/styles/medium_crop_simple/public/2024-01/the-new-hyundai-creta-1_0.jpg?VersionId=BiYnDLcEG3uEzxvrpjcn6GJw6Khgptx7&size=750:*",
+      seats: "5", transmission: "Automatic", topSpeed: "190 km/h", color: "Silver"
     },
+  
+   
     {
       name: "Maruti Suzuki Swift", category: "HatchBack", fuel: "Petrol", price: "₹3000/day",
       img: "https://i.bstr.es/drivingeco/2020/09/nuevo-suzuki-Swift-3.jpg",
       seats: "5", transmission: "Automatic", topSpeed: "180 km/h", color: "Red"
+    } ,
+    { 
+      name: "Maruti WagonR CNG", category: "HatchBack", fuel: "CNG", price: "₹2500/day",
+      img: "https://www.autovista.in/assets/img/new_cars_colour_variants/new-wagonR-colour-superior-white.jpg",
+      seats: "5", transmission: "Manual", topSpeed: "150 km/h", color: "Silver"
     }
   ];
 
@@ -73,6 +104,7 @@ function OurFleet() {
               <option value="SUV">SUV</option>
               <option value="HatchBack">HatchBack</option>
               <option value="Truck">Truck</option>
+              <option value="Coupe">Coupe</option>
             </Form.Select>
           </Form.Group>
         </Col>
